@@ -1,0 +1,211 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar h3 {
+    color: #028060;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    background-color: #028060;
+    color: #fff;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    background-color: #028060;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.header .user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header .user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.header .user-info span {
+    font-size: 14px;
+}
+
+.alert {
+    background-color: #fff3cd;
+    color: #7a6113;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #ffeeba;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Payment Section */
+.payments {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.payment-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.payment-item .header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.payment-item .header span.status {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.payment-item p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Notification Container */
+.notification {
+    position: relative;
+    display: inline-block;
+}
+
+/* Notification Icon */
+.notification .icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+
+.notification .icon .bell-icon::before {
+    content: "🔔"; /* Bell icon as a Unicode character */
+}
+
+.notification .icon .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 7px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Dropdown Container */
+.notification-dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 300px;
+    padding: 15px;
+    z-index: 10;
+}
+
+/* Dropdown Header */
+.notification-dropdown h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Notification Items */
+.notification-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notification-dropdown ul li {
+    padding: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 14px;
+}
+
+.notification-dropdown ul li.warning p {
+    color: #856404;
+    background: #fff3cd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.notification-dropdown ul li.danger p {
+    color: #721c24;
+    background: #f8d7da;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Show Dropdown */
+.notification:hover .notification-dropdown {
+    display: block;
+}
